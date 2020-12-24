@@ -6,7 +6,7 @@
     :expand-on-hover="expandOnHover"
     :right="$vuetify.rtl"
     :src="barImage"
-    mobile-break-point="960"
+    mobile-breakpoint="960"
     app
     width="260"
     v-bind="$attrs"
@@ -31,8 +31,7 @@
           contain
         >
           <v-img
-            src="https://demos.creative-tim.com/vuetify-material-dashboard/favicon.ico"
-            max-height="30"
+            src="../../../../../public/favicon.png"
           />
         </v-list-item-avatar>
 
@@ -107,17 +106,7 @@
         {
           title: 'Caisse',
           icon: 'mdi-clipboard-outline',
-          to: '/pages/user',
-        },
-        {
-          title: 'Statistiques',
-          icon: 'mdi-format-font',
-          to: '/components/typography',
-        },
-        {
-          title: 'notifications',
-          icon: 'mdi-bell',
-          to: '/components/notifications',
+          to: '/caisse/general',
         },
       ],
     }),
@@ -148,7 +137,6 @@
         return {
           ...item,
           children: item.children ? item.children.map(this.mapItem) : undefined,
-          title: this.$t(item.title),
         }
       },
     },

@@ -4,26 +4,46 @@
     fluid
     tag="section"
   >
-    <v-text-field
-      label="Recherche"
-      color="secondary"
-      hide-details
-      style="max-width: 165px;"
-    >
-      <template
-        v-if="$vuetify.breakpoint.mdAndUp"
-        v-slot:append-outer
+    <v-row>
+      <v-col
+        cols="6"
+        class="d-flex justify-center"
+      >
+        <v-text-field
+          label="Recherche"
+          color="secondary"
+          hide-details
+          style="minx-width: 165px;"
+        >
+          <template
+            v-if="$vuetify.breakpoint.mdAndUp"
+            v-slot:append-outer
+          >
+            <v-btn
+              class="mt-n2"
+              elevation="1"
+              fab
+              small
+            >
+              <v-icon>mdi-magnify</v-icon>
+            </v-btn>
+          </template>
+        </v-text-field>
+      </v-col>
+      <v-col
+        class="d-flex justify-end"
+        cols="6"
       >
         <v-btn
-          class="mt-n2"
-          elevation="1"
-          fab
           small
+          color="success"
+          class="mr-0"
+          @click="createNewEmploye"
         >
-          <v-icon>mdi-magnify</v-icon>
+          Creer nouveau profil
         </v-btn>
-      </template>
-    </v-text-field>
+      </v-col>
+    </v-row>
     <base-material-card
       icon="mdi-clipboard-text"
       title="La liste de tous les employés"
@@ -91,6 +111,9 @@
     methods: {
       goDetails () {
         this.$router.push({ path: '/tables/employe-details' })
+      },
+      createNewEmploye () {
+        this.$router.push({ path: '/tables/nouveau-employe' })
       },
     },
   }

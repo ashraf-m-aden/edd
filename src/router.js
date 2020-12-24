@@ -19,7 +19,7 @@ export default new Router({
         },
         // Pages
         {
-          name: 'User Profile',
+          name: 'Mon profil',
           path: 'pages/user',
           component: () => import('@/views/dashboard/pages/UserProfile'),
         },
@@ -49,6 +49,17 @@ export default new Router({
           path: 'tables/employe-details',
           component: () => import('@/views/dashboard/tables/EmployeDetails'),
         },
+        {
+          name: 'Nouveau employé',
+          path: 'tables/nouveau-employe',
+          component: () => import('@/views/dashboard/tables/NewEmploye'),
+        },
+          // Caisses
+          {
+            name: 'Caisse du syndicat',
+            path: 'caisse/general',
+            component: () => import('@/views/dashboard/pages/caisse/Index'),
+          },
         // Maps
         {
           name: 'Google Maps',

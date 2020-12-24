@@ -12,7 +12,7 @@
         <base-material-card>
           <template v-slot:heading>
             <div class="display-2 font-weight-light">
-              Mes informations
+              Nouveau Profil
             </div>
           </template>
 
@@ -23,7 +23,9 @@
                   cols="12"
                   md="4"
                 >
-                  <v-text-field label="Departement" />
+                  <v-text-field
+                    label="Departement"
+                  />
                 </v-col>
 
                 <v-col
@@ -80,55 +82,7 @@
                     color="success"
                     class="mr-0"
                   >
-                    Mettre à jour
-                  </v-btn>
-                </v-col>
-              </v-row>
-            </v-container>
-          </v-form>
-        </base-material-card>
-      </v-col>
-      <v-col
-        cols="12"
-        md="4"
-      >
-        <base-material-card>
-          <template v-slot:heading>
-            <div class="display-2 font-weight-light">
-              Connection
-            </div>
-          </template>
-
-          <v-form>
-            <v-container class="py-0">
-              <v-row>
-                <v-col cols="12">
-                  <v-text-field label="Pseudo" />
-                </v-col>
-
-                <v-col cols="12">
-                  <v-text-field
-                    class="purple-input"
-                    label="Mot de passe"
-                  />
-                </v-col>
-
-                <v-col cols="12">
-                  <v-text-field
-                    label="Confirmation mot de passe"
-                    class="purple-input"
-                  />
-                </v-col>
-
-                <v-col
-                  cols="12"
-                  class="text-right"
-                >
-                  <v-btn
-                    color="success"
-                    class="mr-0"
-                  >
-                    Mettre à jour
+                    Creer nouveau profil
                   </v-btn>
                 </v-col>
               </v-row>
@@ -142,6 +96,6 @@
 
 <script>
   export default {
-  //
+    //
   }
 </script>
